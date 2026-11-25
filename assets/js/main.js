@@ -1,9 +1,7 @@
 const WHATSAPP = '34644818750';
 const waLink = text => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
-// ---------- Cabecera y pie (cuando partials.js los ha cargado) ----------
 function initLayout() {
-  // Menú móvil
   const toggle = document.querySelector('.nav__toggle');
   const links = document.querySelector('.nav__links');
   if (toggle && links) {
@@ -19,14 +17,12 @@ function initLayout() {
     );
   }
 
-  // Año del pie
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 }
 
 if (window.partialsReady) initLayout();
 else document.addEventListener('partials:ready', initLayout, { once: true });
 
-// ---------- Pedir cita desde cada servicio ----------
 document.querySelectorAll('.service:not([data-extra])').forEach(li => {
   const title = li.querySelector('h4');
   const name = title.cloneNode(true);
@@ -51,8 +47,6 @@ document.querySelectorAll('.service:not([data-extra])').forEach(li => {
   li.classList.add('service--bookable');
 });
 
-// ---------- Horario: hoy y "Abierto ahora / Cerrado" ----------
-// Las horas se leen de la tabla del horario del index.html
 const DAY_NAMES = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 const toMin = (h, m) => Number(h) * 60 + Number(m);
 const fmt = min => `${String(Math.floor(min / 60)).padStart(2, '0')}:${String(min % 60).padStart(2, '0')}`;
@@ -105,7 +99,6 @@ function renderStatus() {
 renderStatus();
 setInterval(renderStatus, 60 * 1000);
 
-// ---------- Mapa: solo se carga al pulsar ----------
 document.querySelectorAll('[data-load-map]').forEach(btn =>
   btn.addEventListener('click', () => {
     const map = btn.closest('.map');
@@ -117,7 +110,6 @@ document.querySelectorAll('[data-load-map]').forEach(btn =>
   })
 );
 
-// ---------- Aparición suave al hacer scroll ----------
 const targets = document.querySelectorAll('.section__head, .gift, .info, .map, .notice');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {

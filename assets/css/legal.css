@@ -1,9 +1,6 @@
-/* Páginas legales (aviso legal y privacidad) */
-
 .legal {
   max-width: 760px;
   margin: 0 auto;
-  /* 5rem extra arriba para que el menú fijo no tape el título */
   padding: calc(5rem + clamp(2rem, 5vw, 3.5rem)) 1rem clamp(3rem, 7vw, 5rem);
 }
 .legal h1 { font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: .06em; text-transform: uppercase; margin-top: .2rem; }

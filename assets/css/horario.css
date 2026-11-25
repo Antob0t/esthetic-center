@@ -1,6 +1,3 @@
-/* Horario, contacto y mapa */
-
-/* Abierto ahora / Cerrado */
 .status {
   display: inline-flex;
   align-items: center;
@@ -21,7 +18,6 @@
 .section__head .status { margin: 1.2rem 0 0; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(90, 164, 105, 0); } }
 
-/* Horario y contacto */
 .info {
   max-width: 1000px;
   margin: 0 auto;
@@ -86,7 +82,6 @@
 .contact__item a:hover { color: var(--rose); }
 .contact .btn { align-self: flex-start; }
 
-/* Mapa */
 .map {
   max-width: 1000px;
   margin: 3rem auto 0;

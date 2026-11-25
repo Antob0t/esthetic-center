@@ -1,5 +1,3 @@
-/* Estilos generales: textos, logo, botones, secciones y animación */
-
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body {
@@ -23,13 +21,11 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; margin: 0; }
   margin: 0;
 }
 
-/* Logo */
 .logo { display: block; height: auto; }
 .logo--nav { width: 52px; }
 .logo--hero { width: clamp(150px, 30vw, 230px); }
 .logo--small { width: 80px; margin: 0 auto; }
 
-/* Botones */
 .btn {
   display: inline-block;
   padding: .9rem 2rem;
@@ -49,7 +45,6 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; margin: 0; }
 .btn--ghost { background: transparent; color: var(--gold); }
 .btn--small { padding: .55rem 1.2rem; font-size: .7rem; }
 
-/* Secciones */
 .section { padding: clamp(4rem, 8vw, 6.5rem) clamp(1rem, 4vw, 3rem); }
 .section--tint { background: var(--blush); }
 .section__head { text-align: center; margin-bottom: 3rem; }
@@ -63,7 +58,6 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; margin: 0; }
 .divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: var(--gold-light); }
 .section__hint { margin: 1rem 0 0; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--rose); }
 
-/* Animación de aparición */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 

@@ -1,23 +1,15 @@
-/* Hoja de estilos principal: la única que se enlaza en las páginas.
-   Reúne todos los archivos de esta carpeta. El orden importa: variables y base primero. */
-
 @import url("variables.css");
 @import url("base.css");
 
-/* Partes comunes */
 @import url("nav.css");
 @import url("footer.css");
 @import url("whatsapp.css");
 
-/* Página de inicio */
 @import url("hero.css");
 @import url("aviso.css");
 @import url("servicios.css");
 @import url("regalo.css");
 @import url("horario.css");
 
-/* Páginas legales */
 @import url("legal.css");
 
-/* En pausa: quitar el comentario si se reactivan los tratamientos Premium */
-/* @import url("premium.css"); */

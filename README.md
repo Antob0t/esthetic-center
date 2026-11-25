@@ -70,7 +70,7 @@ Todas las páginas enlazan una sola hoja de estilos:
 | `regalo.css` | Tarjeta regalo |
 | `horario.css` | Abierto/cerrado, horario, contacto y mapa |
 | `legal.css` | Aviso legal y privacidad |
-| `premium.css` | Tratamientos Premium (en pausa, su `@import` está comentado) |
+| `premium.css` | Tratamientos Premium (en pausa, no se importa en `main.css`) |
 
 ## Ver la web en local
 
@@ -84,14 +84,17 @@ Una vez publicada (GitHub Pages, Netlify…), funciona sin hacer nada más.
 
 ## Cambios habituales
 
-- **Precios y servicios:** en `index.html`, sección `SERVICIOS Y PRECIOS`. Cada servicio es un `<li class="service">` y su precio va en `<span class="service__price">`. El enlace de WhatsApp de cada servicio se crea solo.
+- **Precios y servicios:** en `index.html`, sección `id="servicios"`. Cada servicio es un `<li class="service">` y su precio va en `<span class="service__price">`. El enlace de WhatsApp de cada servicio se crea solo.
 - **Horario:** en `index.html`, tabla del horario. El aviso «Abierto ahora / Cerrado» lee las horas de esa tabla. Si cambia, actualiza también `openingHoursSpecification` en los datos para Google (en el `<head>`).
 - **Menú o pie:** en `partials/header.html` y `partials/footer.html`.
-- **Reactivar servicios en pausa:** sigue las instrucciones de `pausado/servicios-pausados.html`.
+- **Reactivar servicios en pausa:** copia los bloques de `pausado/servicios-pausados.html` en `index.html`:
+  - Las categorías (Pestañas, Tratamientos faciales, Maquillaje) dentro de `<div class="categories">`.
+  - La sección Premium antes de la sección `id="regalo"`, y añade `@import url("premium.css");` al final de `assets/css/main.css`.
+  - Las fotos están en `assets/img/pestanas` y `assets/img/faciales`.
 
 ## Antes de publicar
 
-- [ ] Rellenar los datos resaltados de `aviso-legal.html` y `privacidad.html` (NIF, dirección, correo, dominio, alojamiento e IVA).
+- [x] Rellenar los datos resaltados de `aviso-legal.html` y `privacidad.html` (NIF, dirección, correo, dominio, alojamiento e IVA).
 - [ ] En el `<head>` de `index.html`, cambiar `og:image` y la `image`/`logo` de los datos para Google por la URL completa (`https://dominio/assets/img/ui/compartir.jpg`) y añadir `og:url`.
 
 ---
