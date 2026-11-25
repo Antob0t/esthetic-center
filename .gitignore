@@ -1,0 +1,9 @@
+recursos/
+
+.claude/
+.vscode/
+.idea/
+
+Thumbs.db
+Desktop.ini
+.DS_Store

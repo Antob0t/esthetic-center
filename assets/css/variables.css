@@ -1,0 +1,20 @@
+/* Colores, tipografías y medidas comunes */
+
+:root {
+  --blush: #f8e4e1;
+  --blush-light: #fcf2f0;
+  --blush-deep: #f1d1cc;
+  --rose: #b76e79;
+  --gold: #a9774f;
+  --gold-light: #d4ab84;
+  --brown: #4a2f27;
+  --brown-soft: #7a5a50;
+  --white: #fffaf9;
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --script: "Great Vibes", cursive;
+  --sans: "Jost", "Segoe UI", sans-serif;
+
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(169, 119, 79, .12);
+}

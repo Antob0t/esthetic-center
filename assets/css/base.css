@@ -1,0 +1,73 @@
+/* Estilos generales: textos, logo, botones, secciones y animación */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--brown);
+  background: var(--blush-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; margin: 0; }
+
+.script {
+  font-family: var(--script);
+  color: var(--rose);
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Logo */
+.logo { display: block; height: auto; }
+.logo--nav { width: 52px; }
+.logo--hero { width: clamp(150px, 30vw, 230px); }
+.logo--small { width: 80px; margin: 0 auto; }
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: .9rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-weight: 400;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  border: 1px solid var(--gold);
+  transition: transform .25s, box-shadow .25s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn--ghost { background: transparent; color: var(--gold); }
+.btn--small { padding: .55rem 1.2rem; font-size: .7rem; }
+
+/* Secciones */
+.section { padding: clamp(4rem, 8vw, 6.5rem) clamp(1rem, 4vw, 3rem); }
+.section--tint { background: var(--blush); }
+.section__head { text-align: center; margin-bottom: 3rem; }
+.section__head h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: .3rem;
+}
+.divider { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem; color: var(--gold); }
+.divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: var(--gold-light); }
+.section__hint { margin: 1rem 0 0; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--rose); }
+
+/* Animación de aparición */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

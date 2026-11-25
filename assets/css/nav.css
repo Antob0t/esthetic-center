@@ -1,0 +1,68 @@
+/* Menú de navegación */
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .8rem clamp(1rem, 4vw, 3rem);
+  background: rgba(252, 242, 240, .85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(169, 119, 79, .15);
+}
+.nav__logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.nav__name {
+  font-family: var(--serif);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-size: .95rem;
+}
+.nav__links { display: flex; align-items: center; gap: 1.8rem; list-style: none; margin: 0; padding: 0; }
+.nav__links a:not(.btn) {
+  text-decoration: none;
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--brown-soft);
+  transition: color .2s;
+}
+.nav__links a:not(.btn):hover { color: var(--rose); }
+.nav__toggle { display: none; }
+
+@media (max-width: 860px) {
+  .nav__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: 0;
+    padding: .5rem;
+    cursor: pointer;
+  }
+  .nav__toggle span { width: 24px; height: 1.5px; background: var(--gold); transition: transform .3s, opacity .3s; }
+  .nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .nav__links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem 1rem 2rem;
+    background: var(--blush-light);
+    border-bottom: 1px solid rgba(169, 119, 79, .2);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, transform .3s;
+  }
+  .nav__links.open { opacity: 1; transform: none; pointer-events: auto; }
+}
+
+@media (max-width: 480px) {
+  .nav__name { display: none; }
+}

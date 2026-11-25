@@ -1,0 +1,16 @@
+/* Pie de página */
+
+.footer {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: var(--brown);
+  color: var(--blush);
+}
+.footer__name { letter-spacing: .25em; text-transform: uppercase; font-size: .8rem; margin: .5rem 0; }
+.footer__script { color: var(--gold-light); font-size: 1.8rem; }
+.footer__small { font-size: .75rem; opacity: .6; margin-top: 1.5rem; }
+.footer__legal { margin: 1.2rem 0 0; font-size: .8rem; }
+.footer__legal a { color: var(--blush); text-decoration: none; border-bottom: 1px solid rgba(248, 228, 225, .35); }
+.footer__legal a:hover { color: var(--gold-light); }
+.footer__legal a[aria-current] { color: var(--gold-light); }
+.footer__credit { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold-light); opacity: .8; margin: .4rem 0 0; }

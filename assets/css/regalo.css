@@ -1,0 +1,59 @@
+/* Tarjeta regalo */
+
+.gift {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.gift__card {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  background: linear-gradient(145deg, #f6d8d2 0%, #f2cbc4 100%);
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: 0 20px 40px rgba(169, 119, 79, .22);
+  outline: 1px solid var(--gold-light);
+  outline-offset: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-2deg);
+}
+.gift__card::after {
+  content: "";
+  position: absolute;
+  top: -12px; right: 40px;
+  width: 28px; height: calc(100% + 24px);
+  background: linear-gradient(90deg, #d9a59b, #e8bfb5, #d9a59b);
+  border-inline: 1px solid var(--gold-light);
+  opacity: .85;
+}
+.gift__script { color: var(--gold); font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.gift__lines { font-family: var(--serif); font-size: 1rem; color: var(--brown-soft); margin: .6rem 0; }
+.gift__lines p { margin: .2rem 0; display: flex; gap: .5rem; align-items: flex-end; }
+.gift__lines span { display: inline-block; width: 120px; border-bottom: 1px solid var(--gold); margin-bottom: 5px; }
+.gift__vale {
+  border: 1px solid var(--gold);
+  padding: .4rem 2.5rem 1.4rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: var(--brown-soft);
+}
+.gift__text h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); text-transform: uppercase; letter-spacing: .08em; }
+.gift__text > p:not(.script) { color: var(--brown-soft); margin: 1rem 0 1.8rem; }
+
+@media (max-width: 860px) {
+  .gift { grid-template-columns: 1fr; }
+  .gift__card { max-width: 460px; margin: 0 auto; width: 100%; }
+  .gift__text { text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .gift__lines span { width: 80px; }
+}

@@ -1,0 +1,80 @@
+/* Portada */
+
+.header {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(232, 170, 170, .45), transparent 50%),
+    radial-gradient(ellipse at 95% 90%, rgba(232, 170, 170, .4), transparent 45%),
+    var(--blush);
+}
+.header::before, .header::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--gold-light);
+  border-radius: 50%;
+  opacity: .6;
+  pointer-events: none;
+}
+.header::before { width: 520px; height: 520px; top: -260px; left: -200px; }
+.header::after  { width: 460px; height: 460px; bottom: -240px; right: -160px; }
+
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 1rem 4rem;
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(248, 228, 225, .80) 0%, rgba(248, 228, 225, .88) 45%, rgba(248, 228, 225, .96) 100%);
+}
+.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: 40% center; }
+
+@media (min-width: 900px) {
+  .hero__media { display: none; }
+}
+
+.hero__title {
+  font-size: clamp(1.8rem, 5.5vw, 3.6rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: .5rem;
+}
+.hero__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  font-size: clamp(.75rem, 2vw, .95rem);
+  color: var(--brown-soft);
+  margin: .6rem 0 1.2rem;
+}
+.hero__subtitle .line { width: clamp(30px, 8vw, 80px); height: 1px; background: var(--gold-light); }
+.hero__script { font-size: clamp(2.8rem, 8vw, 4.2rem); color: var(--brown); }
+.hero__text { max-width: 540px; color: var(--brown-soft); margin: 1rem 0 2rem; font-size: 1.05rem; }
+.hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.hero__values {
+  margin-top: 3rem;
+  font-size: .78rem;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--brown-soft);
+}
+.hero__values span { color: var(--gold-light); margin: 0 .6rem; }

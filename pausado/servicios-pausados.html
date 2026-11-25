@@ -1,0 +1,135 @@
+<!--
+  SERVICIOS EN PAUSA (no se muestran en la web)
+  Para volver a activarlos, copia cada bloque en index.html:
+  - Las categorías (Pestañas, Faciales, Maquillaje) dentro de <div class="categories">
+  - La sección Premium antes de la sección TARJETA REGALO, y quitar el comentario de @import url("premium.css") en assets/css/main.css
+  Las fotos están en assets/img/pestanas y assets/img/faciales
+-->
+
+      <!-- Pestañas -->
+      <article class="category">
+        <h3 class="category__title">Pestañas</h3>
+        <ul class="services">
+          <li class="service">
+            <div class="service__info">
+              <h4>Lifting de pestañas + tinte</h4>
+              <p>Miradas más abiertas, naturales y expresivas.</p>
+            </div>
+            <span class="service__price">35 €</span>
+          </li>
+          <li class="service">
+            <div class="service__info"><h4>Lifting coreano</h4></div>
+            <span class="service__price">45 €</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Tratamientos faciales -->
+      <article class="category">
+        <h3 class="category__title">Tratamientos faciales</h3>
+        <ul class="services">
+          <li class="service">
+            <div class="service__info">
+              <h4>Limpieza facial con paleta ultrasónica</h4>
+              <p>Profundiza, purifica y renueva tu piel.</p>
+            </div>
+            <span class="service__price">40 €</span>
+          </li>
+          <li class="service">
+            <div class="service__info">
+              <h4>Limpieza completa con HidraBalance</h4>
+              <p>+ tratamiento hidratante, energizante o reparador.</p>
+            </div>
+            <span class="service__price">65 €</span>
+          </li>
+          <li class="service">
+            <div class="service__info">
+              <h4>Exfoliación y renovación celular</h4>
+              <p>Con dermaplaning o exfoliante.</p>
+            </div>
+            <span class="service__price">45 €</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Maquillaje -->
+      <article class="category">
+        <h3 class="category__title">Maquillaje profesional</h3>
+        <ul class="services">
+          <li class="service">
+            <div class="service__info">
+              <h4>Maquillaje para eventos</h4>
+              <p>Tu mejor versión, en cada ocasión.</p>
+            </div>
+            <span class="service__price">40 €</span>
+          </li>
+          <li class="service">
+            <div class="service__info">
+              <h4>Maquillaje para novias</h4>
+              <p>Un día especial, un maquillaje inolvidable.</p>
+            </div>
+            <span class="service__price">Desde 75 €</span>
+          </li>
+        </ul>
+        <p class="category__note">* El maquillaje de novia incluye tratamiento de vitaminas.</p>
+      </article>
+
+  <!-- ============ TRATAMIENTOS PREMIUM ============ -->
+  <section class="section section--tint" id="premium">
+    <div class="section__head">
+      <p class="script">Tratamientos Premium SE</p>
+      <h2>Experiencias y tratamientos especializados</h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+
+    <div class="stars">
+      <article class="star">
+        <svg class="star__icon" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 10C24 22 18 30 18 38a14 14 0 0 0 28 0c0-8-6-16-14-28z"/>
+          <path d="M25 39a7 7 0 0 0 7 7"/>
+        </svg>
+        <h3>Combo de vitaminas para la piel</h3>
+        <p>Especial para pieles maduras. Aporta luminosidad, nutre y revitaliza tu piel.</p>
+        <p class="star__price">70 €</p>
+        <p class="star__detail">2 sesiones</p>
+      </article>
+
+      <article class="star">
+        <svg class="star__icon" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="27" y="8" width="10" height="34" rx="4" transform="rotate(20 32 25)"/>
+          <path d="M24 44l-3 8"/>
+          <path d="M14 54c6-3 14-3 20 0M18 59c4-2 8-2 12 0"/>
+        </svg>
+        <h3>Dermapen con principios activos</h3>
+        <p>Tratamiento personalizado según tu tipo de piel y sus necesidades. Mejora la textura y potencia la regeneración celular.</p>
+        <ul class="star__options">
+          <li><span>1 sesión</span><strong>55 €</strong></li>
+          <li><span>Bono de 3 sesiones</span><strong>145 €</strong></li>
+        </ul>
+      </article>
+
+      <article class="star">
+        <svg class="star__icon" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M8 32c6-8 12-12 17-12 3 0 5 2 7 4 2-2 4-4 7-4 5 0 11 4 17 12-6 8-14 13-24 13S14 40 8 32z"/>
+          <path d="M8 32c8 2 16 3 24 0 8 3 16 2 24 0"/>
+        </svg>
+        <h3>Hidratación de labios con ácido hialurónico</h3>
+        <p>No inyectable, con técnica Dermapen. Labios más jugosos, definidos y con un extra de hidratación.</p>
+        <p class="star__price">30 €</p>
+      </article>
+
+      <article class="star star--highlight">
+        <span class="star__tag">Experiencia relajante ✦</span>
+        <svg class="star__icon" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 50c-6-6-6-18 0-28 6 10 6 22 0 28z"/>
+          <path d="M32 50c-9-2-15-10-15-21 8 2 13 9 15 21z"/>
+          <path d="M32 50c9-2 15-10 15-21-8 2-13 9-15 21z"/>
+          <path d="M32 50c-11 1-19-4-23-12 8-2 16 3 23 12z"/>
+          <path d="M32 50c11 1 19-4 23-12-8-2-16 3-23 12z"/>
+        </svg>
+        <h3>Masaje relajante facial y capilar</h3>
+        <p>Con esencias naturales. Un tratamiento perfecto para regalar: relaja y descongestiona, aportando bienestar al rostro y al cuero cabelludo.</p>
+        <p class="star__price">55 €</p>
+      </article>
+    </div>
+  </section>
