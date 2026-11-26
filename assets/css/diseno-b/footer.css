@@ -1,0 +1,16 @@
+.footer {
+  display: grid;
+  justify-items: center;
+  gap: .5rem;
+  padding: clamp(3.5rem, 8vw, 5.5rem) var(--gutter) 2.2rem;
+  text-align: center;
+  background: var(--paper-warm);
+  border-top: 1px solid var(--line-strong);
+}
+.footer__name { margin: .8rem 0 0; font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.2; }
+.footer__script { font-size: 1.15rem; }
+.footer__small { margin: 2.4rem 0 0; font-size: .72rem; color: var(--ink-soft); }
+.footer__legal { margin: 0; font-size: .66rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+.footer__legal a { text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+.footer__legal a:hover, .footer__legal a[aria-current] { color: var(--rose-deep); border-color: var(--rose-deep); }
+.footer__credit { margin: .4rem 0 0; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-deep); }

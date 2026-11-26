@@ -72,6 +72,15 @@ Todas las páginas enlazan una sola hoja de estilos:
 | `legal.css` | Aviso legal y privacidad |
 | `premium.css` | Tratamientos Premium (en pausa, no se importa en `main.css`) |
 
+### Diseño alternativo (`assets/css/diseno-b/`)
+
+Hay un segundo diseño (minimal editorial) con los mismos archivos que el principal. Usa el mismo HTML; solo cambia el CSS:
+
+- `index.html` → diseño actual.
+- `index.html?diseno=b` → diseño B. Se mantiene al navegar por la web; `?diseno=a` vuelve al actual.
+
+El cambio lo hace `partials.js`. Cuando se elija uno, se puede borrar la carpeta del otro (y el bloque `DISENOS` de `partials.js`, o apuntar el `<link>` de las páginas a `diseno-b/main.css`).
+
 ## Ver la web en local
 
 Como la cabecera y el pie se cargan desde `partials/`, **la web tiene que abrirse desde un servidor**. Con doble clic en `index.html` no aparecerán el menú ni el pie. Cualquiera de estas opciones sirve:

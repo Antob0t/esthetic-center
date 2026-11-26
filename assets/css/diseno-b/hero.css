@@ -1,0 +1,79 @@
+.header { background: var(--paper); }
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  padding-top: var(--nav-h);
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+}
+.logo--hero { order: 0; margin-bottom: 2.5rem; }
+.hero__subtitle { order: 1; }
+.hero__title { order: 2; }
+.hero__script { order: 3; }
+.hero__text { order: 4; }
+.hero__actions { order: 5; }
+.hero__values { order: 6; }
+
+.hero__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.4rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.hero__subtitle .line { width: 48px; height: 1px; background: var(--gold); }
+.hero__subtitle .line:last-child { display: none; }
+.hero__title {
+  font-size: clamp(3.2rem, 7.2vw, 6.8rem);
+  line-height: .95;
+  color: var(--ink);
+}
+.hero__script { margin-top: 1.4rem; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.hero__text { max-width: 34rem; margin: 1.2rem 0 2.2rem; font-size: 1.02rem; color: var(--ink-soft); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero__values {
+  align-self: stretch;
+  margin: clamp(2.5rem, 6vw, 4rem) 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.hero__values span { margin: 0 .7rem; color: var(--gold-light); }
+
+.hero__media { position: relative; overflow: hidden; background: var(--blush); }
+.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: 40% center; }
+.hero__media::after {
+  content: "Casas-Ibáñez · Albacete";
+  position: absolute;
+  right: 1.2rem; bottom: 1.4rem;
+  writing-mode: vertical-rl;
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-shadow: 0 1px 8px rgba(51, 32, 27, .45);
+}
+
+@media (max-width: 899px) {
+  .hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .hero__media { order: -1; aspect-ratio: 4 / 3; }
+  .hero__content { padding-top: 2.5rem; padding-bottom: 3.5rem; }
+  .logo--hero { display: none; }
+}

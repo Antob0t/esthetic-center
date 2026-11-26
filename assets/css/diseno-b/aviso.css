@@ -1,0 +1,11 @@
+.notice {
+  display: grid;
+  justify-items: center;
+  gap: .4rem;
+  padding: clamp(2.5rem, 6vw, 3.5rem) var(--gutter);
+  text-align: center;
+  background: var(--blush);
+}
+.notice__caps { margin: 0; font-size: .7rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; }
+.notice__script { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--ink); }
+.notice__text { margin: .4rem 0 0; font-size: .92rem; color: var(--ink-soft); }

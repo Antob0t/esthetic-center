@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600;700&display=swap");
+
+@import url("variables.css");
+@import url("base.css");
+
+@import url("nav.css");
+@import url("footer.css");
+@import url("whatsapp.css");
+
+@import url("hero.css");
+@import url("aviso.css");
+@import url("servicios.css");
+@import url("regalo.css");
+@import url("horario.css");
+
+@import url("legal.css");

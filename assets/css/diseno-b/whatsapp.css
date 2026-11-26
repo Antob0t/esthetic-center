@@ -1,0 +1,14 @@
+.whatsapp {
+  position: fixed;
+  right: 1.2rem; bottom: 1.2rem;
+  z-index: 60;
+  width: 54px; height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 6px 16px rgba(51, 32, 27, .18);
+  transition: transform .25s;
+}
+.whatsapp:hover { transform: translateY(-3px); }
+.whatsapp svg { width: 28px; height: 28px; fill: #fff; }

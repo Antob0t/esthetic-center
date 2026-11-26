@@ -1,0 +1,21 @@
+:root {
+  --paper: #fffcfa;
+  --paper-warm: #fbf3f1;
+  --blush: #f8e4e1;
+  --rose: #b76e79;
+  --rose-deep: #9a5560;
+  --gold: #a9774f;
+  --gold-deep: #85593a;
+  --gold-light: #d4ab84;
+  --ink: #33201b;
+  --ink-soft: #6f5249;
+  --line: rgba(51, 32, 27, .14);
+  --line-strong: rgba(51, 32, 27, .6);
+
+  --display: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --text: "Manrope", "Segoe UI", system-ui, sans-serif;
+
+  --wrap: 1180px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --nav-h: 72px;
+}
